@@ -72,7 +72,7 @@ jobs:
         with:
           # 빈칸 10: 등록한 secrets 3개를 각각 참조
           host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_UESRNAME }}
+          username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           source: "app.jar"
           target: "/home/ubuntu/app"
