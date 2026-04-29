@@ -43,6 +43,7 @@ jobs:
         run: |
           SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
           TAG="${{ vars.DOCKERHUB_USERNAME }}/cicd-basic-lab:${{ github.run_number }}-$SHORT_SHA"
+          echo "TAG 확인: [$TAG]"
           echo "value=$TAG" >> $GITHUB_OUTPUT
 
       - name: Docker Hub 로그인
