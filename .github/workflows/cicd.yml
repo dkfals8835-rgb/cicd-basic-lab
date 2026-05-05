@@ -72,8 +72,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 배포할 이미지 출력
-        run: |
-	        echo "배포 이미지: ${{ needs.ci.outputs.image_tag }}"
+        run: | 
+          echo "배포 이미지: ${{ needs.ci.outputs.image_tag }}"
 
       - name: AWS 자격증명 설정 (OIDC)
         # 빈칸 2: configure-aws-credentials 액션 (소유자/저장소@v4)
